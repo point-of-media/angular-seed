@@ -36,7 +36,8 @@ var config = function () {
         stats: {
             colors: true,
             modules: false,
-            cached: false
+            cached: false,
+            chunk: false
         }
     };
 
