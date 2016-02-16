@@ -1,11 +1,12 @@
 import angular from 'angular';
 import './example.scss';
+import template from './example.html';
 
 var ExampleComponent = {
     bindings: {
         name: '='
     },
-    templateUrl: require('./example.html')
+    template: template
 };
 
 export default angular
