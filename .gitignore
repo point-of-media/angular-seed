@@ -6,4 +6,4 @@ dist
 .sass-cache
 .idea
 npm-debug.log
-app/build/bundle.js
+app/build/

@@ -32,7 +32,7 @@ var config = function () {
     };
 
     var devServer = {
-        contentBase: './app/build',
+        contentBase: './app',
         stats: {
             colors: true,
             modules: false,
