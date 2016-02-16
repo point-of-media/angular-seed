@@ -14,19 +14,13 @@ var config = function () {
 
     var module = {
         loaders: [
-            {
-                test: /\.js?$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader',
+            {test: /\.js?$/, exclude: /node_modules/, loader: 'babel',
                 query: {
                     presets: ['es2015']
                 }
             },
-            {
-                test: /\.html$/,
-                exclude: /node_modules/,
-                loader: 'raw'
-            }
+            {test: /\.html$/, exclude: /node_modules/, loader: 'raw' },
+            {test: /\.scss$/, loader: 'style!css!postcss!sass'}
 
         ]
     };
