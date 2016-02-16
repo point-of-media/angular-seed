@@ -1,0 +1,14 @@
+node_modules
+css
+generated
+coverage
+dist
+*_generated.js
+*_sprites*.scss
+.tmp
+.sass-cache
+.idea
+npm-debug.log
+local_ip.js
+unit.mocha.json
+app/scripts/app_views.js

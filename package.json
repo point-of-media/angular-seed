@@ -1,0 +1,19 @@
+{
+  "name": "seed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tslint": "^3.3.0",
+    "typescript": "^1.7.5",
+    "webpack": "^1.12.13"
+  },
+  "dependencies": {
+    "angular": "^1.5.0"
+  }
+}
