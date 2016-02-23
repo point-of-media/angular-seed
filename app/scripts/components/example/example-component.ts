@@ -1,15 +1,25 @@
 import * as angular from 'angular';
 //import './example.scss';
-//import template from './example.html';
 
-var ExampleComponent = {
+var exampleComponent = {
     bindings: {
         name: '='
     },
-    templateUrl: './scripts/components/example/example.html'
+    templateUrl: './scripts/components/example/example.html',
+    controller: ExampleComponent
 };
+
+class ExampleComponent {
+    constructor () {
+        this.init();
+    }
+
+    private init(): void {
+        console.log('Component initialized');
+    }
+}
 
 export default angular
     .module('example', [])
-    .component('exampleComponent', ExampleComponent)
+    .component('exampleComponent', exampleComponent)
     .name;
