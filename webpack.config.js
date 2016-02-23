@@ -4,7 +4,7 @@ var webpack = require('webpack');
 
 var config = function () {
     var entry = {
-        app: './app/app.js'
+        app: './app/app.ts'
     };
 
     var output = {
@@ -20,8 +20,8 @@ var config = function () {
                 }
             },
             {test: /\.html$/, exclude: /node_modules/, loader: 'raw' },
-            {test: /\.scss$/, loader: 'style!css!postcss!sass'}
-
+            {test: /\.scss$/, loader: 'style!css!postcss!sass'},
+            {test: /\.ts$/, loader: 'ts-loader'}
         ]
     };
 
@@ -35,11 +35,21 @@ var config = function () {
         }
     };
 
+    var plugins = [
+        /*new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            "window.jQuery": 'jquery'
+        })*/
+    ];
+
+
     return {
         devServer: devServer,
         entry: entry,
         output: output,
-        module: module
+        module: module,
+        plugins: plugins
     };
 };
 
