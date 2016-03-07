@@ -1,9 +1,14 @@
 import * as angular from 'angular';
 
-import exampleComponent from './scripts/components/example/example-component';
+import homeComponent from './scripts/views/home/home-component';
+import routing from './app-routes';
+import 'angular-ui-router';
 
-angular.module('app', [
-    exampleComponent
-]);
+angular
+    .module('app', [
+        'ui.router',
+        homeComponent
+    ])
+    .config(routing);
 
 angular.bootstrap(document.documentElement, ['app']);
