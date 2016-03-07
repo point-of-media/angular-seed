@@ -7,12 +7,20 @@ var config = function () {
         app: './app/app.ts'
     };
 
+    var resolve = {
+        root: __dirname,
+        extensions: ['', '.ts', '.js', '.json']
+    };
+
     var output = {
         path: './app/build',
         filename: 'bundle.js'
     };
 
     var module = {
+        preLoaders: [
+            { test: /\.ts$/, loader: 'tslint' }
+        ],
         loaders: [
             {test: /\.js?$/, exclude: /node_modules/, loader: 'babel',
                 query: {
@@ -36,11 +44,11 @@ var config = function () {
     };
 
     var plugins = [
-        /*new webpack.ProvidePlugin({
+        new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
             "window.jQuery": 'jquery'
-        })*/
+        })
     ];
 
 
@@ -49,7 +57,8 @@ var config = function () {
         entry: entry,
         output: output,
         module: module,
-        plugins: plugins
+        plugins: plugins,
+        resolve: resolve
     };
 };
 
