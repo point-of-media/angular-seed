@@ -19,17 +19,12 @@ var config = function () {
 
     var module = {
         preLoaders: [
-            { test: /\.ts$/, loader: 'tslint' }
+            { test: /\.ts$/, exclude: /node_modules/, loader: 'tslint' }
         ],
         loaders: [
-            {test: /\.js?$/, exclude: /node_modules/, loader: 'babel',
-                query: {
-                    presets: ['es2015']
-                }
-            },
             {test: /\.html$/, exclude: /node_modules/, loader: 'raw' },
             {test: /\.scss$/, loader: 'style!css!postcss!sass'},
-            {test: /\.ts$/, loader: 'ts-loader'}
+            {test: /\.ts$/, exclude: /node_modules/, loader: 'ng-annotate-loader!ts-loader'}
         ]
     };
 
@@ -51,6 +46,7 @@ var config = function () {
         })
     ];
 
+    var devtool = 'source-map';
 
     return {
         devServer: devServer,
@@ -58,7 +54,8 @@ var config = function () {
         output: output,
         module: module,
         plugins: plugins,
-        resolve: resolve
+        resolve: resolve,
+        devtool: devtool
     };
 };
 
