@@ -1,16 +1,10 @@
 {
     "compilerOptions": {
-        "module": "system",
+        "module": "commonjs",
         "target": "es5",
         "noImplicitAny": false,
-        "outDir": "built",
-        "rootDir": ".",
         "sourceMap": true
     },
-    "files": [
-        "typings/browser.d.ts",
-        "require.d.ts"
-    ],
     "exclude": [
         "node_modules",
         "build",
