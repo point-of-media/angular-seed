@@ -1,0 +1,9 @@
+{
+    "users": [
+        { "firstName": "Johnny", "lastName": "Depp"},
+        { "firstName": "Tom", "lastName": "Cruise"},
+        { "firstName": "Harrison", "lastName": "Ford"},
+        { "firstName": "Will", "lastName": "Smith"},
+        { "firstName": "Adam", "lastName": "Sandler"}
+    ]
+}

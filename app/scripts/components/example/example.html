@@ -1,4 +1,9 @@
 <div class="angular-seed-example">
     <p class="example-class">Name: {{$ctrl.name}}</p>
-    <input type="text" ng-model="$ctrl.name">
+    <ul>
+        <li ng-repeat="star in $ctrl.stars.users">
+            <span>{{star.firstName}}</span>
+            <span>{{star.lastName}}</span>
+        </li>
+    </ul>
 </div>
